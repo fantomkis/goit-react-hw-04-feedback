@@ -1,9 +1,16 @@
 import PropTypes from 'prop-types';
+import { nanoid } from 'nanoid';
 function FeedbackOptions({ onLeaveFeedback, options }) {
   return (
     <div>
       {options.map(({ name, type, value }) => (
-        <button onClick={onLeaveFeedback} className="" name={name} type={type}>
+        <button
+          key={nanoid()}
+          onClick={onLeaveFeedback}
+          className=""
+          name={name}
+          type={type}
+        >
           {value}
         </button>
       ))}

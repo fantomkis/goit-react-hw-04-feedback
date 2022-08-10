@@ -3,6 +3,7 @@ import Section from './Section/Section';
 import FeedbackOptions from './FeedbackOptions/FeedbackOptions';
 import Statistics from './Statistics/Statistics';
 import Notification from './Notification/Notification';
+import { options } from '../options/options';
 
 function App() {
   const [good, setGood] = useState(0);
@@ -35,23 +36,6 @@ function App() {
 
     return `${prcent}%`;
   };
-  const options = [
-    {
-      name: 'good',
-      type: 'button',
-      value: 'Good',
-    },
-    {
-      name: 'neutral',
-      type: 'button',
-      value: 'Neutral',
-    },
-    {
-      name: 'bad',
-      type: 'button',
-      value: 'Bad',
-    },
-  ];
 
   return (
     <div
